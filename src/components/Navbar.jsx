@@ -68,7 +68,7 @@ export default function Navbar() {
       </div>
 
       {/* Nav Links with Advanced Hover Effects */}
-      <div className="flex items-center gap-12 text-sm">
+      <div className="flex items-center gap-12 text-sm ml-60">
         {[
           { to: "/", label: "Home" },
           { to: "/about", label: "About Us" },
