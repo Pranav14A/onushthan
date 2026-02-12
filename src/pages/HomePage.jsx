@@ -78,10 +78,10 @@ export default function HomePage() {
               <span className="text-xs text-cyan-300 font-semibold tracking-wide">Next-Gen Event Platform</span>
             </div>
 
-            <h1 className="text-7xl font-black leading-tight mb-6">
+            <h1 className="text-7xl font-black leading-[1.2] mb-6">
               <span className="relative inline-block">
-                <span className="font-['Great_Vibes'] text-9xl bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-                  Onushthan  
+                <span className="font-['Great_Vibes'] text-9xl bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent pr-4 ">
+                  Onushthan
                 </span>
               </span>
 
