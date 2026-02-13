@@ -10,39 +10,162 @@ import {
 
 const EVENT_CATEGORIES = [
   {
-    title: "Technicals",
+    title: "College Events( Technical + Cultural Fest)",
     gradient: "from-purple-500 to-pink-600",
     events: [
-      { name: "CodeBlaze", desc: "24-hour national level hackathon", img: "./images/1.jpeg" },
-      { name: "HackNova", desc: "Innovation-first coding sprint", img: "./images/2.jpeg" },
-      { name: "HackNova", desc: "Innovation-first coding sprint", img: "./images/3.jpeg" },
-      { name: "HackNova", desc: "Innovation-first coding sprint", img: "https://images.unsplash.com/photo-1531482615713-2afd69097998" },
+      { 
+        name: "IOT EXPOSITION", 
+        desc: "Where Hardware Meets Software", 
+        images: [
+          "./images/1.jpeg",
+          "./images/2.jpeg",
+          "./images/3.jpeg",
+          "https://images.unsplash.com/photo-1531482615713-2afd69097998"
+        ]
+      },
+      { 
+        name: "AI UNLEASHED", 
+        desc: "AI Unleashed brings together AI leaders and innovators from across the globe.", 
+        images: [
+          "./images/2.jpeg",
+          "./images/3.jpeg",
+          "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+          "https://images.unsplash.com/photo-1531482615713-2afd69097998"
+        ]
+      },
+      // { 
+      //   name: "TechSprint", 
+      //   desc: "Innovation-first coding sprint", 
+      //   images: [
+      //     "./images/3.jpeg",
+      //     "https://images.unsplash.com/photo-1531482615713-2afd69097998",
+      //     "./images/1.jpeg",
+      //     "./images/2.jpeg"
+      //   ]
+      // },
+      // { 
+      //   name: "DevFest", 
+      //   desc: "Innovation-first coding sprint", 
+      //   images: [
+      //     "https://images.unsplash.com/photo-1531482615713-2afd69097998",
+      //     "./images/1.jpeg",
+      //     "./images/2.jpeg",
+      //     "./images/3.jpeg"
+      //   ]
+      // },
     ],
   },
   {
-    title: "Expos",
+    title: "Commercial events",
     gradient: "from-orange-500 to-pink-500",
     events: [
-      { name: "IoT Expo", desc: "Smart devices & hardware showcase", img: "https://images.unsplash.com/photo-1518770660439-4636190af475" },
-      { name: "Startup Expo", desc: "Early-stage innovation demos", img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7" },
-      { name: "Startup Expo", desc: "Early-stage innovation demos", img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7" },
-      { name: "Startup Expo", desc: "Early-stage innovation demos", img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7" },
+      {
+    "name": "Nexara Technologies",
+    "desc": "Corporate Program",
+    "images": [
+      "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7",
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87",
+      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf",
+      "https://images.unsplash.com/photo-1573164713988-8665fc963095",
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+      "https://images.unsplash.com/photo-1531482615713-2afd69097998"
+    ]
+  },
+  {
+    "name": "CALLCHIMP.AI",
+    "desc": "Corporate Program",
+    "images": [
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7",
+      "https://images.unsplash.com/photo-1559136555-9303baea8ebd",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87",
+      "https://images.unsplash.com/photo-1553877522-43269d4ea984",
+      "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98",
+      "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+    ]
+  }
+      // { 
+      //   name: "Tech Showcase", 
+      //   desc: "Early-stage innovation demos", 
+      //   images: [
+      //     "https://images.unsplash.com/photo-1556761175-5973dc0f32e7",
+      //     "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      //     "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+      //     "https://images.unsplash.com/photo-1559136555-9303baea8ebd"
+      //   ]
+      // },
+      // { 
+      //   name: "Innovation Fair", 
+      //   desc: "Early-stage innovation demos", 
+      //   images: [
+      //     "https://images.unsplash.com/photo-1556761175-5973dc0f32e7",
+      //     "https://images.unsplash.com/photo-1540575467063-178a50c2df87",
+      //     "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+      //     "https://images.unsplash.com/photo-1518770660439-4636190af475"
+      //   ]
+      // },
     ],
   },
   {
-    title: "Culturals",
+    title: "Social events (Collage Fests)",
     gradient: "from-emerald-500 to-teal-500",
     events: [
-      { name: "Future of AI", desc: "Industry expert panel", img: "/images/2.png" },
-      { name: "Cybersecurity", desc: "Modern threat landscape", img: "/images/4.png" },
-      { name: "Future of AI", desc: "Industry expert panel", img: "https://images.unsplash.com/photo-1531297484001-80022131f5a1" },
-      { name: "Future of AI", desc: "Industry expert panel", img: "https://images.unsplash.com/photo-1531297484001-80022131f5a1" },
+      { 
+        name: "Sahotsava", 
+        desc: "Techno India University Cultural Fest", 
+        images: [
+          "/images/2.png",
+          "/images/4.png",
+          "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+          "https://images.unsplash.com/photo-1540575467063-178a50c2df87"
+        ]
+      },
+      { 
+        name: "Unifest", 
+        desc: "Sister Nivedita University Cultural Fest", 
+        images: [
+          "/images/4.png",
+          "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+          "/images/2.png",
+          "https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
+        ]
+      },
+      // { 
+      //   name: "Tech Talks", 
+      //   desc: "Industry expert panel", 
+      //   images: [
+      //     "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+      //     "/images/2.png",
+      //     "/images/4.png",
+      //     "https://images.unsplash.com/photo-1540575467063-178a50c2df87"
+      //   ]
+      // }, 
+      // { 
+      //   name: "Innovation Summit", 
+      //   desc: "Industry expert panel", 
+      //   images: [
+      //     "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+      //     "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+      //     "/images/2.png",
+      //     "/images/4.png"
+      //   ]
+      // },
     ],
   },
 ];
 
 export default function HomePage() {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [lightbox, setLightbox] = useState(null);
+
+  const openLightbox = (images, startIndex = 0) => {
+    setLightbox({
+      images,
+      index: startIndex
+    });
+  };
 
   return (
     <div className="text-white min-h-screen relative overflow-hidden">
@@ -78,10 +201,10 @@ export default function HomePage() {
               <span className="text-xs text-cyan-300 font-semibold tracking-wide">Next-Gen Event Platform</span>
             </div>
 
-            <h1 className="text-7xl font-black leading-[1.2] mb-6">
+            <h1 className="text-7xl font-black leading-tight mb-6">
               <span className="relative inline-block">
-                <span className="font-['Great_Vibes'] text-9xl bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent pr-4 ">
-                  Onushthan
+                <span className="font-['Great_Vibes'] text-9xl bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent pr-4">
+                  Onushthan  
                 </span>
               </span>
 
@@ -139,25 +262,57 @@ export default function HomePage() {
                   <div className="grid grid-cols-4 gap-10">
                     {category.events.map((event, j) => (
                       <ScrollReveal key={j} delay={j * 0.08} variant="fadeUp">
-                        <div className="group relative cursor-pointer">
-                          <div className={`absolute -inset-3 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-40 blur-2xl transition-all duration-700 rounded-3xl`} />
-                          <div className="relative bg-gradient-to-br from-white/10 to-white/0 backdrop-blur-xl border-2 border-white/20 rounded-3xl overflow-hidden transition-all duration-500 group-hover:scale-110 group-hover:border-white/40">
+                        <div 
+                          className="group relative cursor-pointer animate-float"
+                          style={{
+                            animationDelay: `${j * 0.2}s`,
+                          }}
+                          onClick={() => openLightbox(event.images, 0)}
+                        >
+                          {/* Animated glow effect */}
+                          <div className={`absolute -inset-3 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-40 blur-2xl transition-all duration-700 rounded-3xl animate-pulse-slow`} />
+                          
+                          {/* Rotating border gradient */}
+                          <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-rotate" />
+                          
+                          <div className="relative bg-gradient-to-br from-white/10 to-white/0 backdrop-blur-xl border-2 border-white/20 rounded-3xl overflow-hidden transition-all duration-500 group-hover:scale-105 group-hover:border-white/40 group-hover:shadow-2xl group-hover:shadow-purple-500/20">
                             <div className="relative h-44 overflow-hidden">
                               <img
-                                src={`${event.img}?auto=format&fit=crop&w=600&q=80`}
+                                src={`${event.images[0]}?auto=format&fit=crop&w=600&q=80`}
                                 alt={event.name}
-                                onClick={() => setSelectedImage(event.img)}
-                                className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-1000 cursor-pointer"
+                                className="w-full h-full object-cover group-hover:scale-125 group-hover:rotate-2 transition-all duration-1000"
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                              
+                              {/* Shimmer effect */}
                               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
+                              
+                              {/* Animated particles overlay */}
+                              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping" />
+                                <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-400 rounded-full animate-ping" style={{ animationDelay: '0.2s' }} />
+                                <div className="absolute bottom-1/3 left-1/2 w-2 h-2 bg-pink-400 rounded-full animate-ping" style={{ animationDelay: '0.4s' }} />
+                              </div>
+                              
+                              {/* Image count badge with animation */}
+                              <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs text-white/90 font-semibold group-hover:scale-110 group-hover:bg-gradient-to-r group-hover:from-cyan-500/80 group-hover:to-purple-500/80 transition-all duration-300">
+                                {event.images.length} photos
+                              </div>
                             </div>
                             <div className="p-8">
-                              <h4 className="text-xl font-black mb-3 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                              <h4 className="text-xl font-black mb-3 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
                                 {event.name}
                               </h4>
-                              <p className="text-sm text-white/60 leading-relaxed">{event.desc}</p>
+                              <p className="text-sm text-white/60 leading-relaxed group-hover:text-white/80 transition-colors duration-300">{event.desc}</p>
+                              
+                              {/* Animated progress bar */}
                               <div className={`mt-6 h-1 w-0 group-hover:w-full bg-gradient-to-r ${category.gradient} rounded-full transition-all duration-500`} />
+                              
+                              {/* View gallery hint */}
+                              <div className="mt-4 flex items-center gap-2 text-xs text-white/40 group-hover:text-white/70 transition-colors duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                                <span>View gallery</span>
+                                <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" />
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -171,28 +326,106 @@ export default function HomePage() {
         </ScrollReveal>
       </div>
 
-      {/* ── Lightbox ── */}
-      {selectedImage && (
+      {/* ── Lightbox Collage ── */}
+      {lightbox && (
         <div
-          className="fixed inset-0 bg-black/60 backdrop-blur-md flex items-center justify-center z-50 p-10"
-          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 bg-black/95 backdrop-blur-xl flex items-center justify-center z-50 p-10 overflow-y-auto"
+          onClick={() => setLightbox(null)}
         >
           <div
-            className="relative bg-white rounded-3xl p-6 max-w-5xl w-full shadow-2xl"
+            className="relative max-w-7xl w-full my-auto"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Close */}
             <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute -top-4 -right-4 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold hover:scale-110 transition"
-            >✕</button>
-            {selectedImage.endsWith(".mp4") ? (
-              <video src={selectedImage} controls autoPlay className="w-full max-h-[80vh] rounded-2xl" />
-            ) : (
-              <img src={selectedImage} alt="Preview" className="w-full max-h-[80vh] object-contain rounded-2xl" />
-            )}
+              onClick={() => setLightbox(null)}
+              className="absolute -top-8 -right-8 w-14 h-14 rounded-full bg-white text-black text-2xl font-bold hover:scale-110 transition z-20 shadow-2xl flex items-center justify-center"
+            >
+              ✕
+            </button>
+
+            {/* Event Title */}
+            <div className="text-center mb-8">
+              <h3 className="text-4xl font-black bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                Event Gallery
+              </h3>
+              <p className="text-white/60 text-sm mt-2">{lightbox.images.length} photos</p>
+            </div>
+
+            {/* Image Grid/Collage */}
+            <div className="grid grid-cols-2 gap-4">
+              {lightbox.images.map((img, idx) => (
+                <div
+                  key={idx}
+                  className="group relative overflow-hidden rounded-2xl cursor-pointer"
+                  style={{
+                    gridColumn: idx === 0 ? 'span 2' : 'span 1',
+                  }}
+                >
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={`${img}?auto=format&fit=crop&w=1200&q=90`}
+                      alt={`Photo ${idx + 1}`}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      style={{
+                        height: idx === 0 ? '500px' : '350px',
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  
+                  {/* Photo number badge */}
+                  <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1.5 rounded-full text-xs text-white/90 font-semibold">
+                    {idx + 1}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )}
+
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+
+        @keyframes pulse-slow {
+          0%, 100% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 0.4;
+          }
+        }
+
+        @keyframes gradient-rotate {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-pulse-slow {
+          animation: pulse-slow 3s ease-in-out infinite;
+        }
+
+        .animate-gradient-rotate {
+          animation: gradient-rotate 3s linear infinite;
+        }
+      `}</style>
+
     </div>
   );
 }
