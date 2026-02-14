@@ -18,8 +18,8 @@ const EVENT_CATEGORIES = [
         desc: "Where Hardware Meets Software", 
         images: [
           "./images/1.jpeg",
-          "./images/2.jpeg",
-          "./images/3.jpeg",
+          "./images/IMG_8433.JPG",
+          "",
           ""
         ]
       },
@@ -28,9 +28,9 @@ const EVENT_CATEGORIES = [
         desc: "AI Unleashed brings together AI leaders and innovators from across the globe.", 
         images: [
           "./images/2.jpeg",
-          "./images/3.jpeg",
-          "",
-          ""
+          "./images/AI.png",
+          "./images/AI1.png",
+          "./images/trophy.png"
         ]
       },
       // { 
@@ -117,20 +117,19 @@ const EVENT_CATEGORIES = [
         name: "Sahotsava", 
         desc: "Techno India University Cultural Fest", 
         images: [
+          "./images/fosslis.png",
           "/images/2.png",
-          "/images/4.png",
-          "",
-          ""
+          "/images/4.png"
         ]
       },
       { 
         name: "Unifest", 
         desc: "Sister Nivedita University Cultural Fest", 
         images: [
-          "/images/4.png",
-          "",
-          "/images/2.png",
-          ""
+          "./images/4.jpg",
+          "./images/a22.jpeg",
+          "./images/2.png",
+          "./images/a44.png"
         ]
       },
       // { 
