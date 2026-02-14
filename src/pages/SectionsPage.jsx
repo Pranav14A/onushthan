@@ -1,4 +1,5 @@
 import ScrollReveal from "../components/ScrollReveal";
+import { useState } from "react";
 import {
   Zap,
   Users,
@@ -12,7 +13,30 @@ import {
   Globe,
   Shield,
 } from "lucide-react";
+
+const FUN_EVENTS = {
+  title: "Fun Events",
+  gradient: "from-yellow-500 to-orange-500",
+  events: [
+    { 
+      name: "Fun events", 
+      desc: "", 
+      images: [
+        "/images/arcade.png",
+        "./images/image.png",
+        "/images/water.jpeg"
+      ]
+    },
+  ],
+};
+
 export default function AboutPage() {
+  const [lightbox, setLightbox] = useState(null);
+
+  const openLightbox = (images, startIndex = 0) => {
+    setLightbox({ images, index: startIndex });
+  };
+
   return (
     <div className="text-white min-h-screen relative overflow-hidden">
       {/* Ultra Enhanced Animated Background */}
@@ -177,7 +201,7 @@ export default function AboutPage() {
                 {
                   img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
                   title: "Smart Planning",
-                  desc: "We plan every event according to the client’s space, ensuring proper layout, aesthetic design, and smooth animations for a perfectly structured experience.",
+                  desc: "We plan every event according to the client's space, ensuring proper layout, aesthetic design, and smooth animations for a perfectly structured experience.",
                   icon: Rocket,
                   gradient: "from-blue-500 to-cyan-500",
                 },
@@ -246,245 +270,148 @@ export default function AboutPage() {
                 </ScrollReveal>
               ))}
             </div>
+          </section>
+        </ScrollReveal>
 
-            <div className="text-center mt-20">
-              {/* <button className="group relative px-10 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 font-bold overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/60 hover:scale-110">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
-                <span className="relative z-15">Explore All Features</span>
-                <div className="absolute -inset-1 bg-gradient-to-r from-purple-400 to-pink-500 opacity-0 group-hover:opacity-50 blur-xl transition-all duration-500 rounded-full" />
-              </button> */}
+        {/* ── FUN EVENTS SECTION ── */}
+        <ScrollReveal delay={0.1}>
+          <section className="px-24 mt-40">
+            <div className="text-center mb-20">
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-600/20 border border-yellow-500/40 mb-6 backdrop-blur-xl shadow-lg shadow-yellow-500/20 hover:shadow-yellow-500/40 transition-all duration-300 hover:scale-105 group cursor-pointer">
+                <Sparkles className="w-4 h-4 text-yellow-400 group-hover:animate-spin" />
+                <span className="text-xs text-yellow-300 font-semibold tracking-wide">
+                  Good Vibes Only
+                </span>
+              </div>
+              <h3 className="text-5xl font-black bg-gradient-to-r from-white via-yellow-200 to-white/60 bg-clip-text text-transparent mb-4 drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                Fun Events
+              </h3>
+              <p className="text-white/50 text-lg">
+                Because every great event deserves a moment of pure joy
+              </p>
+            </div>
+
+            <div className="grid grid-cols-4 gap-10">
+              {FUN_EVENTS.events.map((event, j) => (
+                <ScrollReveal key={j} delay={j * 0.08} variant="fadeUp">
+                  <div
+                    className="group relative cursor-pointer animate-float"
+                    style={{ animationDelay: `${j * 0.2}s` }}
+                    onClick={() => openLightbox(event.images, 0)}
+                  >
+                    {/* Animated glow effect */}
+                    <div className={`absolute -inset-3 bg-gradient-to-br ${FUN_EVENTS.gradient} opacity-0 group-hover:opacity-40 blur-2xl transition-all duration-700 rounded-3xl animate-pulse-slow`} />
+
+                    {/* Rotating border gradient */}
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-rotate" />
+
+                    <div className="relative bg-gradient-to-br from-white/10 to-white/0 backdrop-blur-xl border-2 border-white/20 rounded-3xl overflow-hidden transition-all duration-500 group-hover:scale-105 group-hover:border-white/40 group-hover:shadow-2xl group-hover:shadow-yellow-500/20">
+                      <div className="relative h-44 overflow-hidden">
+                        <img
+                          src={`${event.images[0]}?auto=format&fit=crop&w=600&q=80`}
+                          alt={event.name}
+                          className="w-full h-full object-cover group-hover:scale-125 group-hover:rotate-2 transition-all duration-1000"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+
+                        {/* Shimmer effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
+
+                        {/* Animated particles overlay */}
+                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400 rounded-full animate-ping" />
+                          <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-orange-400 rounded-full animate-ping" style={{ animationDelay: '0.2s' }} />
+                          <div className="absolute bottom-1/3 left-1/2 w-2 h-2 bg-pink-400 rounded-full animate-ping" style={{ animationDelay: '0.4s' }} />
+                        </div>
+
+                        {/* Image count badge */}
+                        <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs text-white/90 font-semibold group-hover:scale-110 group-hover:bg-gradient-to-r group-hover:from-yellow-500/80 group-hover:to-orange-500/80 transition-all duration-300">
+                          {event.images.length} photos
+                        </div>
+                      </div>
+                      <div className="p-8">
+                        <h4 className="text-xl font-black mb-3 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+                          {event.name}
+                        </h4>
+                        <p className="text-sm text-white/60 leading-relaxed group-hover:text-white/80 transition-colors duration-300">{event.desc}</p>
+
+                        {/* Animated progress bar */}
+                        <div className={`mt-6 h-1 w-0 group-hover:w-full bg-gradient-to-r ${FUN_EVENTS.gradient} rounded-full transition-all duration-500`} />
+
+                        {/* View gallery hint */}
+                        <div className="mt-4 flex items-center gap-2 text-xs text-white/40 group-hover:text-white/70 transition-colors duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                          <span>View gallery</span>
+                          <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              ))}
             </div>
           </section>
         </ScrollReveal>
       </div>
-      {/* We Also Offer Section */}
-      <ScrollReveal delay={0.1}>
-        <section className="px-24 mt-40">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-pink-500/20 to-orange-600/20 border border-pink-500/40 mb-6 backdrop-blur-xl shadow-lg shadow-pink-500/20 hover:shadow-pink-500/40 transition-all duration-300 hover:scale-105 group cursor-pointer">
-              <Sparkles className="w-4 h-4 text-pink-400 group-hover:animate-spin" />
-              <span className="text-xs text-pink-300 font-semibold tracking-wide">
-                Premium Services
-              </span>
+      
+
+      {/* ── Lightbox Collage ── */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 bg-black/95 backdrop-blur-xl flex items-center justify-center z-50 p-10 overflow-y-auto"
+          onClick={() => setLightbox(null)}
+        >
+          <div
+            className="relative max-w-7xl w-full my-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close */}
+            <button
+              onClick={() => setLightbox(null)}
+              className="absolute -top-8 -right-8 w-14 h-14 rounded-full bg-white text-black text-2xl font-bold hover:scale-110 transition z-20 shadow-2xl flex items-center justify-center"
+            >
+              ✕
+            </button>
+
+            {/* Event Title */}
+            <div className="text-center mb-8">
+              <h3 className="text-4xl font-black bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                Event Gallery
+              </h3>
+              <p className="text-white/60 text-sm mt-2">{lightbox.images.length} photos</p>
             </div>
 
-            <h3 className="text-5xl font-black bg-gradient-to-r from-white via-pink-200 to-white/60 bg-clip-text text-transparent mb-4 drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]">
-              We Also Offer
-            </h3>
-            <p className="text-white/50 text-lg">
-              Comprehensive solutions for every aspect of your event
-            </p>
-          </div>
-
-          <div className="grid grid-cols-3 gap-10">
-            {[
-              {
-                img: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678",
-                title: "Professional Photography",
-                desc: "Capture every precious moment with our expert photographers who specialize in event coverage and candid shots.",
-                icon: "📸",
-                gradient: "from-violet-500 to-purple-600",
-                features: ["4K Video", "Drone Coverage", "Same Day Edits"],
-              },
-              {
-                img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819",
-                title: "Live Entertainment",
-                desc: "From DJs to live bands, we bring the perfect entertainment to match your event's vibe and energy.",
-                icon: "🎵",
-                gradient: "from-pink-500 to-rose-600",
-                features: [
-                  "Live Bands",
-                  "DJs",
-                  "Artists Performance",
-                  "Fun Activities / Games",
-                ],
-              },
-              {
-                img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1",
-                title: "Catering Services",
-                desc: "Delight your guests with gourmet cuisine crafted by top chefs, tailored to your preferences and dietary needs.",
-                icon: "🍽️",
-                gradient: "from-orange-500 to-amber-600",
-                features: [
-                  "Custom Menus",
-                  "Dietary Options",
-                  "Live Stations",
-                  "Savoury Counters",
-                ],
-              },
-              {
-                img: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30",
-                title: "Premium Decor",
-                desc: "Transform your venue with stunning decorations, lighting, and thematic elements that leave lasting impressions.",
-                icon: "✨",
-                gradient: "from-cyan-500 to-blue-600",
-                features: [
-                  "Theme Design",
-                  "Floral Arrangements",
-                  "LED Lighting",
-                ],
-              },
-              {
-                img: "https://images.unsplash.com/photo-1519167758481-83f29da8848c",
-                title: "Transportation & Logistics",
-                desc: "Seamless coordination of guest transportation, vendor deliveries, and equipment setup for stress-free events.",
-                icon: "🚗",
-                gradient: "from-emerald-500 to-teal-600",
-                features: [
-                  "Guest Shuttles",
-                  "Valet Service",
-                  "Equipment Transport",
-                ],
-              },
-              {
-                img: "https://images.unsplash.com/photo-1511578314322-379afb476865",
-                title: "Event Security & Communication",
-                desc: "Professional security personnel ensuring safety and smooth operations throughout your event duration.",
-                icon: "🛡️",
-                gradient: "from-slate-500 to-gray-600",
-                features: [
-                  "Crowd Management",
-                  "VIP Protection",
-                  "Emergency Response",
-                  "RFID Scanners",
-                  "Body Scanners",
-                  "Walkie-Talkie",
-                ],
-              },
-              {
-                img: "https://images.unsplash.com/photo-1511578314322-379afb476865",
-                title: "Premium Printing Services",
-                desc: "High-quality printing solutions tailored for your events, ensuring vibrant visuals, premium finishes, and timely delivery for a flawless presentation.",
-                icon: "🖨️",
-                gradient: "from-slate-500 to-gray-600",
-                features: [
-                  "Banners & Flex Printing",
-                  "Event Backdrops",
-                  "Invitation Cards",
-                  "ID Cards & Badges",
-                  "Brochures & Flyers",
-                  "T-Shirt Printing",
-                ],
-              },
-              {
-                img: "https://images.unsplash.com/photo-1549924231-f129b911e442",
-                title: "Awards & Recognition",
-                desc: "Premium-quality medals, trophies, and customized awards designed to celebrate achievement and leave a lasting impression on every winner.",
-                icon: "🏆",
-                gradient: "from-amber-500 to-yellow-600",
-                features: [
-                  "Custom Trophies",
-                  "Gold & Silver Medals",
-                  "Crystal Awards",
-                  "Engraving & Personalization",
-                  "Bulk Award Production",
-                ],
-              },
-            ].map((service, i) => (
-              <ScrollReveal key={i} delay={i * 0.1} variant="fadeUp">
+            {/* Image Grid/Collage */}
+            <div className="grid grid-cols-2 gap-4">
+              {lightbox.images.map((img, idx) => (
                 <div
-                  className="group relative cursor-pointer h-full"
+                  key={idx}
+                  className="group relative overflow-hidden rounded-2xl cursor-pointer"
                   style={{
-                    animationDelay: `${i * 0.15}s`,
+                    gridColumn: idx === 0 ? 'span 2' : 'span 1',
                   }}
                 >
-                  {/* Animated outer glow */}
-                  <div
-                    className={`absolute -inset-4 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-30 blur-3xl transition-all duration-700 animate-pulse-slow`}
-                  />
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={`${img}?auto=format&fit=crop&w=1200&q=90`}
+                      alt={`Photo ${idx + 1}`}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      style={{
+                        height: idx === 0 ? '500px' : '350px',
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
 
-                  {/* Rotating shimmer border */}
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-rotate" />
-
-                  <div className="relative h-full bg-gradient-to-br from-white/10 to-white/0 backdrop-blur-xl border-2 border-white/20 rounded-3xl overflow-hidden transition-all duration-500 group-hover:scale-105 group-hover:border-white/40 group-hover:shadow-2xl flex flex-col">
-                    {/* Image Section */}
-                    <div className="relative h-56 overflow-hidden">
-                      <img
-                        src={`${service.img}?auto=format&fit=crop&w=800&q=80`}
-                        alt={service.title}
-                        className="w-full h-full object-cover group-hover:scale-125 group-hover:rotate-3 transition-all duration-1000"
-                      />
-
-                      {/* Gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
-
-                      {/* Shimmer effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
-
-                      {/* Icon badge */}
-                      <div className="absolute top-4 right-4 w-14 h-14 rounded-2xl bg-black/60 backdrop-blur-md flex items-center justify-center text-3xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-xl">
-                        {service.icon}
-                      </div>
-
-                      {/* Floating particles */}
-                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-white rounded-full animate-ping" />
-                        <div
-                          className="absolute top-2/3 right-1/4 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-ping"
-                          style={{ animationDelay: "0.3s" }}
-                        />
-                        <div
-                          className="absolute bottom-1/4 left-1/2 w-2 h-2 bg-pink-400 rounded-full animate-ping"
-                          style={{ animationDelay: "0.6s" }}
-                        />
-                      </div>
-                    </div>
-
-                    {/* Content Section */}
-                    <div className="p-8 flex-1 flex flex-col">
-                      <h4 className="text-2xl font-black mb-3 bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
-                        {service.title}
-                      </h4>
-
-                      <p className="text-sm text-white/60 leading-relaxed mb-6 group-hover:text-white/80 transition-colors duration-300 flex-1">
-                        {service.desc}
-                      </p>
-
-                      {/* Features tags */}
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {service.features.map((feature, idx) => (
-                          <span
-                            key={idx}
-                            className={`px-3 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r ${service.gradient} bg-opacity-20 border border-white/20 text-white/80 group-hover:scale-105 transition-all duration-300 backdrop-blur-sm`}
-                            style={{ transitionDelay: `${idx * 50}ms` }}
-                          >
-                            {feature}
-                          </span>
-                        ))}
-                      </div>
-
-                      {/* Animated progress bar */}
-                      <div
-                        className={`h-1 w-0 group-hover:w-full bg-gradient-to-r ${service.gradient} rounded-full transition-all duration-500`}
-                      />
-
-                      {/* Learn more link */}
-                      <div className="mt-4 flex items-center gap-2 text-xs text-white/40 group-hover:text-white/70 transition-colors duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                        <span className="font-semibold">Learn more</span>
-                        <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" />
-                      </div>
-                    </div>
+                  {/* Photo number badge */}
+                  <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1.5 rounded-full text-xs text-white/90 font-semibold">
+                    {idx + 1}
                   </div>
                 </div>
-              </ScrollReveal>
-            ))}
+              ))}
+            </div>
           </div>
-
-          {/* Call to Action */}
-          {/* <div className="text-center mt-20">
-              <button className="group relative px-12 py-5 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 font-bold text-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/60 hover:scale-110">
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
-                <span className="relative z-10 flex items-center gap-3">
-                  <span>Explore All Services</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-                </span>
-                <div className="absolute -inset-2 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 opacity-0 group-hover:opacity-40 blur-2xl transition-all duration-500 rounded-full" />
-              </button>
-            </div> */}
-        </section>
-      </ScrollReveal>
+        </div>
+      )}
 
       <style jsx>{`
         @keyframes float {
