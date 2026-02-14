@@ -56,60 +56,6 @@ const EVENT_CATEGORIES = [
     ],
   },
   {
-    title: "Commercial events",
-    gradient: "from-orange-500 to-pink-500",
-    events: [
-      {
-    "name": "Nexara Technologies",
-    "desc": "Corporate Program",
-    "images": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
-  },
-  {
-    "name": "CALLCHIMP.AI",
-    "desc": "Corporate Program",
-    "images": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
-  }
-      // { 
-      //   name: "Tech Showcase", 
-      //   desc: "Early-stage innovation demos", 
-      //   images: [
-      //     "https://images.unsplash.com/photo-1556761175-5973dc0f32e7",
-      //     "https://images.unsplash.com/photo-1518770660439-4636190af475",
-      //     "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
-      //     "https://images.unsplash.com/photo-1559136555-9303baea8ebd"
-      //   ]
-      // },
-      // { 
-      //   name: "Innovation Fair", 
-      //   desc: "Early-stage innovation demos", 
-      //   images: [
-      //     "https://images.unsplash.com/photo-1556761175-5973dc0f32e7",
-      //     "https://images.unsplash.com/photo-1540575467063-178a50c2df87",
-      //     "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
-      //     "https://images.unsplash.com/photo-1518770660439-4636190af475"
-      //   ]
-      // },
-    ],
-  },
-  {
     title: "Social events (Collage Fests)",
     gradient: "from-emerald-500 to-teal-500",
     events: [
@@ -175,6 +121,40 @@ const EVENT_CATEGORIES = [
       //     "./images/a44.png"
       //   ]
       // },
+    ],
+  },
+  {
+    title: "Commercial events",
+    gradient: "from-orange-500 to-pink-500",
+    events: [
+      {
+    "name": "Nexara Technologies",
+    "desc": "Corporate Program",
+    "images": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "CALLCHIMP.AI",
+    "desc": "Corporate Program",
+    "images": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  }
     ],
   },
 ];
