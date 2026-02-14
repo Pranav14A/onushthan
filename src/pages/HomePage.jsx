@@ -20,7 +20,7 @@ const EVENT_CATEGORIES = [
           "./images/1.jpeg",
           "./images/2.jpeg",
           "./images/3.jpeg",
-          "https://images.unsplash.com/photo-1531482615713-2afd69097998"
+          ""
         ]
       },
       { 
@@ -29,8 +29,8 @@ const EVENT_CATEGORIES = [
         images: [
           "./images/2.jpeg",
           "./images/3.jpeg",
-          "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
-          "https://images.unsplash.com/photo-1531482615713-2afd69097998"
+          "",
+          ""
         ]
       },
       // { 
@@ -63,28 +63,28 @@ const EVENT_CATEGORIES = [
     "name": "Nexara Technologies",
     "desc": "Corporate Program",
     "images": [
-      "https://images.unsplash.com/photo-1518770660439-4636190af475",
-      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7",
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87",
-      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
-      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf",
-      "https://images.unsplash.com/photo-1573164713988-8665fc963095",
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
-      "https://images.unsplash.com/photo-1531482615713-2afd69097998"
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
     ]
   },
   {
     "name": "CALLCHIMP.AI",
     "desc": "Corporate Program",
     "images": [
-      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7",
-      "https://images.unsplash.com/photo-1559136555-9303baea8ebd",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475",
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87",
-      "https://images.unsplash.com/photo-1553877522-43269d4ea984",
-      "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98",
-      "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
     ]
   }
       // { 
@@ -119,8 +119,8 @@ const EVENT_CATEGORIES = [
         images: [
           "/images/2.png",
           "/images/4.png",
-          "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
-          "https://images.unsplash.com/photo-1540575467063-178a50c2df87"
+          "",
+          ""
         ]
       },
       { 
@@ -128,9 +128,9 @@ const EVENT_CATEGORIES = [
         desc: "Sister Nivedita University Cultural Fest", 
         images: [
           "/images/4.png",
-          "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+          "",
           "/images/2.png",
-          "https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
+          ""
         ]
       },
       // { 
