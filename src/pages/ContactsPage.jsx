@@ -71,7 +71,7 @@ export default function ContactPage() {
                 {
                   icon: Phone,
                   title: "Call Us",
-                  value: "+91 98368 11178",
+                  value: "+91 85840 98704",
                   gradient: "from-purple-500 to-pink-600",
                 },
                 {
