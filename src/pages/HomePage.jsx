@@ -128,7 +128,6 @@ const EVENT_CATEGORIES = [
         images: [
           "./images/4.jpg",
           "./images/a22.jpeg",
-          "./images/2.png",
           "./images/a44.png"
         ]
       },
