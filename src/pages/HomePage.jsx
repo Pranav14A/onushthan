@@ -153,6 +153,30 @@ const EVENT_CATEGORIES = [
       // },
     ],
   },
+  {
+    title: "Fun Events",
+    gradient: "from-emerald-500 to-teal-500",
+    events: [
+      { 
+        name: "Fun events", 
+        desc: "", 
+        images: [
+           "/images/arcade.png",
+          "./images/image.png",
+          "/images/water.jpeg"
+        ]
+      },
+      // { 
+      //   name: "Unifest", 
+      //   desc: "", 
+      //   images: [
+      //     "./images/4.jpg",
+      //     "./images/a22.jpeg",
+      //     "./images/a44.png"
+      //   ]
+      // },
+    ],
+  },
 ];
 
 export default function HomePage() {
