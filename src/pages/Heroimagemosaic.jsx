@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 const SETS = [
   {
     tallLeft:     "/images/a66.jpeg",
-    circleTop:    "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=600&q=80",
+    circleTop:    "./images/rupamda.png",
     rectBot:      "/images/ab.png",
     largeMid:     "/images/a88.jpeg",
     circleRight:  "/images/a77.jpeg",
